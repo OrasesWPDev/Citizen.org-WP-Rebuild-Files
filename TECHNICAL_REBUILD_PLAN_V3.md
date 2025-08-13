@@ -13,7 +13,8 @@
 This V3 technical plan represents a pragmatic, developer-focused approach to rebuilding the Public Citizen website. After careful analysis of both V1 and V2 plans, V3 maintains the solid foundation of V1 while incorporating only the most essential enhancements from V2, eliminating unnecessary complexity and cost overruns.
 
 **Key Metrics from Live Site Analysis:**
-- **Total Content Items:** 21,492 posts across all custom post types
+- **Total Content Items:** 21,838 posts (21,387 published + 79 drafts/private)
+- **Published Content:** 21,387 posts accessible to website visitors
 - **Users to Migrate:** 88 users with custom role structure
 - **Taxonomies to Consolidate:** 6 current → 3 simplified
 - **Active Plugins:** 41 total (33 regular + 8 must-use/dropins)
@@ -28,7 +29,7 @@ This V3 technical plan represents a pragmatic, developer-focused approach to reb
 
 #### **SearchWP Standard ($99/year)**
 **Why Keep:** 
-- 21,492 content items require professional search beyond WordPress default
+- 21,387 published content items require professional search beyond WordPress default
 - Native ACF Pro integration essential for custom field search
 - PDF indexing capability for legal documents
 - Realistic ROI for improved user experience
@@ -41,7 +42,7 @@ This V3 technical plan represents a pragmatic, developer-focused approach to reb
 #### **WP Migrate Pro ($139)**
 **Why Keep:**
 - Complex taxonomy consolidation (6→3) requires reliable automation
-- Content relationship preservation across 21K items
+- Content relationship preservation across 21,387 published items
 - GUI interface reduces human error vs custom WP-CLI scripts
 - Professional rollback capabilities for risk mitigation
 
@@ -223,7 +224,7 @@ Values: Staff, Board, Experts, Contributors
 - [ ] Internal UAT passed
 
 ### Phase 2: News Content Migration (Week 5-6)
-**Target:** 15,144 news articles with category mapping
+**Target:** 15,052 published news articles with category mapping
 
 **Migration Strategy:**
 - **Batch Processing:** 500 articles per batch via WP Migrate Pro
@@ -247,7 +248,7 @@ $news_mapping = [
 - Category assignment validation
 
 **Success Criteria:**
-- [ ] All 15,144 news items migrated successfully
+- [ ] All 15,052 news items migrated successfully
 - [ ] Search performance maintained under load
 - [ ] Category filtering functional
 
@@ -255,9 +256,9 @@ $news_mapping = [
 **Target:** People profiles, action items, victory stories
 
 **Content Scope:**
-- People (140 items) → Enhanced People post type
-- Acts (190 items) → Articles with "Action" category  
-- Stories (47 items) → Articles with "Victory" category
+- People (138 items) → Enhanced People post type
+- Acts (138 items) → Articles with "Action" category  
+- Stories (43 items) → Articles with "Victory" category
 
 **Search Enhancement:**
 - People directory with expertise search
@@ -273,14 +274,14 @@ $news_mapping = [
 **Target:** Litigation and complex content
 
 **Specialized Handling:**
-- Litigation (1,142 items) → Resources with "Legal" category
+- Litigation (1,141 items) → Resources with "Legal" category
 - PDF document indexing via SearchWP
 - Legal case metadata preservation
 - Advanced search capabilities for legal content
 
 **Topics and Supertags Consolidation:**
 - Topics (91 items) → Navigation structure and categories
-- Supertags (18 items) → Content tags system
+- Supertags (15 items) → Content tags system
 
 **Success Criteria:**
 - [ ] Legal resources searchable including PDF content
@@ -586,7 +587,7 @@ V3 represents the optimal balance between V1's practical foundation and V2's pro
 - **Unique to V3:** Developer-focused approach with realistic timeline and costs
 
 ### Success Metrics
-- **Content Migration:** 21,492 items with <0.1% loss
+- **Content Migration:** 21,387 published items with <0.1% loss
 - **Search Improvement:** 10x better content discovery vs WordPress default
 - **Performance:** Maintain <3 second page loads across all content
 - **Editorial Efficiency:** 50% reduction in content creation complexity

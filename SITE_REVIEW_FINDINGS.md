@@ -139,21 +139,51 @@ These visual examples provide concrete evidence of the administrative burden and
 - **91+ topic categories** indicating potential redundancy and maintenance overhead
 - **Limited flexibility** for adapting to new organizational needs
 
-## Database Analysis Findings
+## Database Analysis Findings (Verified via WP-CLI - August 13, 2025)
 
 ### Content Volume
+- **Total Content Items:** 21,838 posts across all content types (verified via live site access)
+- **Published Content Items:** 21,387 posts accessible to website visitors
+- **Draft/Private Content:** 79 posts (78 drafts + 1 private)
 - **Extensive historical content** dating back to 2008
 - **Heavy reliance on custom fields** for content relationships
 - **Complex metadata structures** supporting taxonomy system
 - **Large number of taxonomy terms** indicating rich but potentially redundant categorization
 
-### Content Distribution
-Based on URL rewrite rules analysis:
-- **Topics**: Primary organizational structure
-- **Articles**: High-volume content type with editor support
-- **News**: Historical content with date-based organization  
-- **Litigation**: Specialized content with case-specific categorization
-- **People**: Staff/expert profiles with type-based classification
+### Content Distribution (Live Site Verification - Published Content Only)
+**Custom Post Types:**
+| Post Type | Published Count | Migration Priority | Target Consolidation |
+|-----------|-------|-------------------|---------------------|
+| **News** | 15,052 | Phase 2 | → Articles (News Category) |
+| **Articles** | 4,523 | Phase 1 | → Articles |
+| **Litigation** | 1,141 | Phase 4 | → Resources (Legal Category) |
+| **Acts** | 138 | Phase 3 | → Articles (Action Category) |
+| **People** | 138 | Phase 3 | → People |
+| **Topics** | 91 | Phase 4 | → Remove (convert to categories) |
+| **Stories** | 43 | Phase 3 | → Articles (Victory Category) |
+| **Supertags** | 15 | Phase 4 | → Remove (convert to tags) |
+| **Posts** | 36 | Standard | → Maintain |
+| **Pages** | 210 | Standard | → Maintain |
+
+**Current Taxonomy Structure (Verified):**
+| Taxonomy | Terms | Applied To | Migration Strategy |
+|----------|-------|------------|-------------------|
+| **tax_topic** | 79 | article, topic, news, act, litigation, post | → Categories |
+| **tax_case_topic** | 34 | article, litigation, topic, news | → Categories (Legal) |
+| **tax_supertag** | 18 | supertag, article, act, news | → Tags |
+| **tax_type** | 4 | article | → Categories |
+| **tax_news** | 5 | news | → Categories |
+| **person_type** | 4 | person | → Custom Field |
+
+**User Structure (Verified):**
+- **Total Users:** 88
+- **Custom Roles Identified:** policy_author, policy_editor, organizer, litigation_editor, comms_intern
+- **Migration Required:** All users with role mapping to simplified structure
+
+**Plugin Ecosystem (Verified):**
+- **Total Plugins:** 42 (26 active, 16 inactive)
+- **Must-Use Plugins:** 7 WP Engine specific plugins
+- **Key Active Plugins:** ACF Pro, Defender, Query Monitor, Redirection, TablePress, User Role Editor, Yoast SEO
 
 ## Live Site User Experience Assessment
 
