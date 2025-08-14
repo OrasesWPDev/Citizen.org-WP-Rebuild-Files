@@ -1,4 +1,4 @@
-# Public Citizen Website Technical Rebuild Plan V3
+# Public Citizen Website Technical Rebuild Plan
 ## The Practical Developer Approach
 
 **Project Type:** Architecture Rebuild with Design Preservation  
@@ -10,7 +10,7 @@
 
 ## Executive Summary
 
-This V3 technical plan represents a pragmatic, developer-focused approach to rebuilding the Public Citizen website. After careful analysis of both V1 and V2 plans, V3 maintains the solid foundation of V1 while incorporating only the most essential enhancements from V2, eliminating unnecessary complexity and cost overruns.
+This technical plan represents a pragmatic, developer-focused approach to rebuilding the Public Citizen website. This plan focuses on streamlined architecture, essential professional tools, and realistic implementation timelines.
 
 **Key Metrics from Live Site Analysis:**
 - **Total Content Items:** 21,838 posts (21,387 published + 79 drafts/private)
@@ -19,90 +19,13 @@ This V3 technical plan represents a pragmatic, developer-focused approach to reb
 - **Taxonomies to Consolidate:** 6 current → 3 simplified
 - **Active Plugins:** 41 total (33 regular + 8 must-use/dropins)
 - **Timeline:** 12 weeks (realistic and achievable)
-- **Tool Investment:** $238 (vs V2's $1,630 - 85% cost reduction)
+- **Tool Investment:** $238 for essential professional tools
 
 ---
 
-## V3 Decision Matrix: What We Keep, What We Cut
+## Technology Stack
 
-### ✅ Essential Additions from V2
-
-#### **SearchWP Standard ($99/year)**
-**Why Keep:** 
-- 21,387 published content items require professional search beyond WordPress default
-- Native ACF Pro integration essential for custom field search
-- PDF indexing capability for legal documents
-- Realistic ROI for improved user experience
-
-**Implementation:**
-- Custom search algorithm weighting for articles vs resources
-- ACF field integration for comprehensive content discovery
-- Legal document PDF indexing for litigation resources
-
-#### **WP Migrate Pro ($139)**
-**Why Keep:**
-- Complex taxonomy consolidation (6→3) requires reliable automation
-- Content relationship preservation across 21,387 published items
-- GUI interface reduces human error vs custom WP-CLI scripts
-- Professional rollback capabilities for risk mitigation
-
-**Implementation:**
-- Automated taxonomy mapping during migration phases
-- Batch processing for large content volumes
-- Relationship verification scripts
-
-#### **Extended Timeline (12 weeks)**
-**Why Keep:**
-- V1's 10-week timeline was ambitious for quality delivery
-- Additional 2 weeks provide buffer for proper testing and training
-- Allows for thorough SearchWP configuration and optimization
-
-### ❌ Removed from V2 (Over-Engineering)
-
-#### **ACSS - Automatic CSS ($297)**
-**Why Cut:**
-- **Core Framework already provides CSS architecture**
-- Duplicate functionality with existing design system
-- Additional learning curve for team without clear ROI
-- Current CSS variables system already sophisticated
-
-#### **JetEngine ($43-88)**
-**Why Cut:**
-- **ACF Pro + Bricks Builder Dynamic Data already handles content relationships**
-- Adds unnecessary layer of complexity to simplified architecture
-- WordPress native capabilities sufficient for content volume
-- Focus on reducing complexity, not adding tools
-
-#### **FacetWP ($249)**
-**Why Cut:**
-- **SearchWP + Bricks Builder filtering covers requirements**
-- Overkill for content filtering needs
-- Can be implemented via Bricks Query Builder + SearchWP
-- Cost not justified for improved user experience margin
-
-#### **Duplicator Pro ($199)**
-**Why Cut:**
-- **WP Engine staging environments + WP Migrate Pro sufficient**
-- Redundant backup strategy with existing hosting infrastructure
-- WP Engine provides enterprise-grade backup and cloning
-
-#### **BricksExtras ($89)**
-**Why Cut:**
-- **Nice-to-have, not essential for rebuild goals**
-- Bricks Builder + Core Framework provides sufficient element library
-- Additional elements can be added post-launch if needed
-
-#### **Oasis Workflow Pro ($199)**
-**Why Cut:**
-- **WordPress native roles sufficient for 88-user organization**
-- Over-engineered solution for team size and workflow complexity
-- Simplified content structure reduces workflow complexity needs
-
----
-
-## V3 Technology Stack
-
-### Core Platform (Maintained from V1)
+### Core Platform
 - **Bricks Builder** - Visual page builder and theme system
 - **Core Framework** - CSS architecture and design system preservation
 - **Advanced Themer** - Productivity enhancement for Bricks
@@ -112,12 +35,12 @@ This V3 technical plan represents a pragmatic, developer-focused approach to reb
 - **SearchWP Standard** ($99/year) - Professional search for large content volume
 - **WP Migrate Pro** ($139) - Reliable migration with taxonomy automation
 
-**Total Enhanced Stack Investment: $238**
-**ROI vs Custom Development: 4,950% (($12,000 - $238) / $238)**
+**Total Professional Tool Investment: $238**
+**ROI vs Custom Development: 4,950%**
 
 ---
 
-## Content Architecture (Maintained from V1)
+## Content Architecture
 
 ### Simplified Post Type Structure (4 Total)
 
@@ -547,7 +470,6 @@ Essential Tool Licenses:
 - WP Migrate Pro (4 sites): $139/year
 Total Annual Investment: $238
 
-Compare to V2: $1,630 (85% cost reduction)
 Compare to Custom Development: $12,000+ (98% cost reduction)
 ```
 
@@ -572,32 +494,32 @@ ROI = ($12,000 - $238) / $238 = 4,950%
 
 ## Conclusion
 
-V3 represents the optimal balance between V1's practical foundation and V2's professional enhancements. By carefully selecting only essential tools and maintaining focus on the core rebuild objectives, V3 delivers:
+This plan represents an optimal balance of practical implementation with professional-grade tools. By selecting only essential tools and maintaining focus on the core rebuild objectives, this approach delivers:
 
 ### Key Success Factors
-1. **Cost Effectiveness:** $238 investment vs $1,630 (V2) or $12,000+ (custom)
+1. **Cost Effectiveness:** $238 investment vs $12,000+ (custom development)
 2. **Technical Excellence:** Professional-grade search and migration capabilities
 3. **Risk Mitigation:** Proven tools with enterprise support
 4. **Team Adoption:** Simplified architecture with enhanced capabilities
 5. **Scalability:** Foundation for future growth and enhancement
 
-### Critical Advantages Over V1 and V2
-- **From V1:** Adds essential search capability and reliable migration tools
-- **From V2:** Eliminates over-engineering while keeping core improvements
-- **Unique to V3:** Developer-focused approach with realistic timeline and costs
+### Critical Implementation Advantages
+- **Essential Tools Only:** Professional search capability and reliable migration tools
+- **Simplified Architecture:** Eliminates over-engineering while maintaining capabilities
+- **Developer-Focused:** Realistic timeline and cost-effective approach
 
 ### Success Metrics
 - **Content Migration:** 21,387 published items with <0.1% loss
 - **Search Improvement:** 10x better content discovery vs WordPress default
 - **Performance:** Maintain <3 second page loads across all content
 - **Editorial Efficiency:** 50% reduction in content creation complexity
-- **Cost Efficiency:** 85% cost reduction vs V2, 98% vs custom development
+- **Cost Efficiency:** 98% cost reduction vs custom development
 
-V3 positions Public Citizen for efficient content management, reduced technical debt, and improved user experience while maintaining fiscal responsibility and technical excellence.
+This approach positions Public Citizen for efficient content management, reduced technical debt, and improved user experience while maintaining fiscal responsibility and technical excellence.
 
 ---
 
-**Project Status:** V3 Planning Complete - Ready for Implementation  
+**Project Status:** Planning Complete - Ready for Implementation  
 **Next Phase:** Tool Procurement and Development Environment Setup  
 **Investment Required:** $238 premium tools + 12-week development timeline  
 **Risk Profile:** Low (proven tools, realistic timeline, focused scope)
